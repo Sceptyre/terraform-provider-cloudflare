@@ -150,6 +150,12 @@ var originsElem = &schema.Resource{
 			Description: "Whether this origin is enabled. Disabled origins will not receive traffic and are excluded from health checks.",
 		},
 
+		"virtual_network_id": {
+			Type:        schema.TypeString,
+			Optional:    true,
+			Description: "The virtual network subnet ID the origin belongs in. Virtual network must also belong to the account.",
+		},
+
 		"header": {
 			Type:        schema.TypeSet,
 			Optional:    true,
